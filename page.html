@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Titre de la page</title>
+	<style>
+		/* Aligner le titre à gauche */
+		h1 {
+			text-align: right;
+		}
+
+		/* Centrer les champs de saisie */
+		input[type="text"], input[type="password"] {
+			display: block;
+			margin: 0 auto;
+			padding: 10px;
+			width: 50%;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			font-size: 16px;
+			box-sizing: border-box;
+		}
+
+		/* Centrer le bouton de connexion */
+		input[type="submit"] {
+			display: block;
+			margin: 0 auto;
+			padding: 10px 20px;
+			background-color: #050de9; /* Ajout d'une couleur de fond pour le bouton */
+			color: white; /* Ajout d'une couleur de texte pour le bouton */
+			border-radius: 5px; /* Ajout d'un arrondi pour le bouton */
+			border: none; /* Suppression de la bordure du bouton */
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		/* Aligner le lien "Mot de passe oublié" à gauche */
+		a {
+			text-align: left;
+			display: block;
+			margin-top: 10px;
+			font-size: 14px;
+		}
+
+		/* Aligner le lien "Créer un nouveau compte" à droite */
+		a.new-account {
+			text-align: right;
+			display: block;
+			margin-top: 10px;
+            font-size: 14px;
+            background-color: #4CAF50; /* Ajout d'une couleur de fond pour le bouton */
+            color: white; /* Ajout d'une couleur de texte pour le bouton */
+            padding: 10px; /* Ajout d'un espacement interne pour le bouton */
+            border-radius: 5px; /* Ajout d'un arrondi pour le bouton */
+            text-decoration: none; /* Suppression du soulignement du lien */
+            width: fit-content; /* Ajustement de la largeur du bouton en fonction du texte */
+            margin-left:auto; /* Déplacement du bouton vers la droite */
+            margin-right:auto; /* Déplacement du bouton vers la gauche */
+        }
+        
+        /* Centrer tous les champs sauf le titre "challenge" */
+        body {
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+        
+        h1 {
+            text-align:left;
+        }
+        
+        form {
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+        
+        input[type="submit"] {
+            background-color:#0e2fc4 !important; 
+        }
+
+        a.new-account {
+            background-color:#008000 !important; 
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>CHALLENGE</h1>
+    <form>
+        <label for="email">Adresse e-mail ou numéro de téléphone:</label><br>
+        <input type="text" id="email" name="email"><br>
+
+        <label for="password">Mot de passe:</label><br>
+        <input type="password" id="password" name="password"><br>
+
+        <input type="submit" value="Se connecter">
+
+        <a href="#">Mot de passe oublié?</a>
+
+        <a href="#" class="new-account">Créer un nouveau compte</a>
+    </form>
+</body>
+</html>
