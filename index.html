@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007BFF; /* Bouton "Connexion" en bleu */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .register-button {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .green-button {
+            background-color: #4CAF50; /* Bouton "Créer un nouveau compte" en vert */
+        }
+
+        /* Masquer le deuxième formulaire par défaut */
+        .register-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Premier formulaire - Connexion -->
+        <form id="login-form">
+            <h1>Challenge</h1> <!-- Titre "Challenge" ajouté ici -->
+            <label for="emailtel">Adresse Email ou Numéro de Téléphone:</label>
+            <input type="text" id="emailtel" name="emailtel" required>
+
+            <label for="password">Mot de Passe:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" id="next-button">Créer un nouveau compte</button>
+        </form>
+
+        <!-- Deuxième formulaire - Inscription -->
+        <form id="register-form" class="register-form">
+            <h1>S'inscrire</h1>
+            <label for="firstName">Prénom:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Nom de Famille:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="mobileOrEmail">Numéro de Mobile ou E-mail:</label>
+            <input type="text" id="mobileOrEmail" name="mobileOrEmail" required>
+
+            <label for="newPassword">Nouveau Mot de Passe:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+
+            <label for="birthdate">Date de Naissance:</label>
+            <input type="date" id="birthdate" name="birthdate" value="<?php echo date('Y-m-d'); ?>" required>
+
+            <label for="gender">Genre:</label>
+            <select id="gender" name="gender" required>
+                <option value="female">Femme</option>
+                <option value="male">Homme</option>
+                <option value="custom">Personnalisé</option>
+            </select>
+
+            <button type="button" class="green-button">S'inscrire</button>
+        </form>
+    </div>
+
+    <script>
+        // Écoutez le clic sur le bouton "Créer un nouveau compte"
+        document.getElementById('next-button').addEventListener('click', function() {
+            // Masquer le premier formulaire
+            document.getElementById('login-form').style.display = 'none';
+            // Afficher le deuxième formulaire
+            document.getElementById('register-form').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
